@@ -1,0 +1,21 @@
+{
+  "OutBlock_1": [
+    {
+      "BAS_DD": "20260102",
+      "ISU_CD": "0043Y0",
+      "ISU_NM": "SYNTHETIC EXAMPLE — NOT MARKET DATA",
+      "MKT_NM": "KOSPI",
+      "SECT_TP_NM": "-",
+      "TDD_CLSPRC": "10,010",
+      "CMPPREVDD_PRC": "-10",
+      "FLUC_RT": "-0.10",
+      "TDD_OPNPRC": "10,020",
+      "TDD_HGPRC": "10,030",
+      "TDD_LWPRC": "10,000",
+      "ACC_TRDVOL": "0",
+      "ACC_TRDVAL": "-",
+      "MKTCAP": "9007199254740993",
+      "LIST_SHRS": "1,000"
+    }
+  ]
+}

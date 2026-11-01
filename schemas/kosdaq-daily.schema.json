@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "코스닥 일별매매정보",
+  "description": "Raw wire shape. Use the Python validator for calendar dates, grouping, nonnegative quantities, duplicate records, and expected-date checks.",
+  "type": "object",
+  "required": [
+    "OutBlock_1"
+  ],
+  "properties": {
+    "OutBlock_1": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "BAS_DD",
+          "ISU_CD",
+          "ISU_NM",
+          "MKT_NM",
+          "SECT_TP_NM",
+          "TDD_CLSPRC",
+          "CMPPREVDD_PRC",
+          "FLUC_RT",
+          "TDD_OPNPRC",
+          "TDD_HGPRC",
+          "TDD_LWPRC",
+          "ACC_TRDVOL",
+          "ACC_TRDVAL",
+          "MKTCAP",
+          "LIST_SHRS"
+        ],
+        "properties": {
+          "BAS_DD": {
+            "type": "string",
+            "description": "기준일자"
+          },
+          "ISU_CD": {
+            "type": "string",
+            "description": "종목코드"
+          },
+          "ISU_NM": {
+            "type": "string",
+            "description": "종목명"
+          },
+          "MKT_NM": {
+            "type": "string",
+            "description": "시장구분"
+          },
+          "SECT_TP_NM": {
+            "type": "string",
+            "description": "소속부"
+          },
+          "TDD_CLSPRC": {
+            "type": "string",
+            "description": "종가"
+          },
+          "CMPPREVDD_PRC": {
+            "type": "string",
+            "description": "대비"
+          },
+          "FLUC_RT": {
+            "type": "string",
+            "description": "등락률"
+          },
+          "TDD_OPNPRC": {
+            "type": "string",
+            "description": "시가"
+          },
+          "TDD_HGPRC": {
+            "type": "string",
+            "description": "고가"
+          },
+          "TDD_LWPRC": {
+            "type": "string",
+            "description": "저가"
+          },
+          "ACC_TRDVOL": {
+            "type": "string",
+            "description": "거래량"
+          },
+          "ACC_TRDVAL": {
+            "type": "string",
+            "description": "거래대금"
+          },
+          "MKTCAP": {
+            "type": "string",
+            "description": "시가총액"
+          },
+          "LIST_SHRS": {
+            "type": "string",
+            "description": "상장주식수"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true,
+  "x-source": "https://openapi.krx.co.kr/contents/OPP/USES/service/OPPUSES002_S2.cmd?BO_ID=hZjGpkllgCBCWqeTsYFj",
+  "x-verified-on": "2026-11-01"
+}

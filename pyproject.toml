@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "krx-openapi-tools"
+version = "0.1.0"
+description = "Source-linked data contracts and validation for KRX OpenAPI daily equity data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "MinDongJae"}]
+dependencies = []
+
+[project.scripts]
+krx-openapi = "krx_openapi_tools.__main__:main"
+
+[tool.setuptools]
+packages = ["krx_openapi_tools"]
+
+[tool.setuptools.package-data]
+krx_openapi_tools = ["contracts.json"]

@@ -1,0 +1,529 @@
+{
+  "contract_version": "0.1.0",
+  "wire_definition_source": "KRX public developer specifications",
+  "semantic_rules_owner": "krx-openapi-tools; normalization and validation rules are project decisions",
+  "datasets": {
+    "kospi": {
+      "market": "kospi",
+      "title": "유가증권 일별매매정보",
+      "source_url": "https://openapi.krx.co.kr/contents/OPP/USES/service/OPPUSES002_S2.cmd?BO_ID=JvJFzlAENzZlPBDNGAWC",
+      "source_html_sha256": "760021d10ba0f5646112c5e60f600cb587b08c7d22c271f3685e702c93bf58e6",
+      "verified_on": "2026-11-01",
+      "sample_path": "/svc/sample/apis/sto/stk_bydd_trd.json",
+      "production_path": "/svc/apis/sto/stk_bydd_trd",
+      "input": [
+        {
+          "label": "기준일자",
+          "name": "basDd",
+          "size": "8",
+          "type": "string"
+        }
+      ],
+      "block": "OutBlock_1",
+      "fields": [
+        {
+          "label": "기준일자",
+          "name": "BAS_DD",
+          "type": "string",
+          "semantic_type": "date"
+        },
+        {
+          "label": "종목코드",
+          "name": "ISU_CD",
+          "type": "string",
+          "semantic_type": "identifier"
+        },
+        {
+          "label": "종목명",
+          "name": "ISU_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "label": "시장구분",
+          "name": "MKT_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "default": "-",
+          "label": "소속부",
+          "name": "SECT_TP_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "종가",
+          "name": "TDD_CLSPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "대비",
+          "name": "CMPPREVDD_PRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": false,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0.00",
+          "label": "등락률",
+          "name": "FLUC_RT",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": false,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "시가",
+          "name": "TDD_OPNPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "고가",
+          "name": "TDD_HGPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "저가",
+          "name": "TDD_LWPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "거래량",
+          "name": "ACC_TRDVOL",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "거래대금",
+          "name": "ACC_TRDVAL",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "시가총액",
+          "name": "MKTCAP",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "상장주식수",
+          "name": "LIST_SHRS",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        }
+      ],
+      "downloadable_spec_sha256": "93e91aef8bca2d41a08339486dfc22a76d7d425ab8883ec4411d4197c3375630",
+      "production_endpoint_verified": true,
+      "endpoint_verification": "Production endpoint and wire fields checked against this dataset's downloadable public developer specification. Authenticated live calls are not part of this release verification."
+    },
+    "kosdaq": {
+      "market": "kosdaq",
+      "title": "코스닥 일별매매정보",
+      "source_url": "https://openapi.krx.co.kr/contents/OPP/USES/service/OPPUSES002_S2.cmd?BO_ID=hZjGpkllgCBCWqeTsYFj",
+      "source_html_sha256": "332fb6a390593c78003f1fe5555fab6a480db3c4b6abecd15544a83ad066ed48",
+      "verified_on": "2026-11-01",
+      "sample_path": "/svc/sample/apis/sto/ksq_bydd_trd.json",
+      "production_path": "/svc/apis/sto/ksq_bydd_trd",
+      "input": [
+        {
+          "label": "기준일자",
+          "name": "basDd",
+          "size": "8",
+          "type": "string"
+        }
+      ],
+      "block": "OutBlock_1",
+      "fields": [
+        {
+          "label": "기준일자",
+          "name": "BAS_DD",
+          "type": "string",
+          "semantic_type": "date"
+        },
+        {
+          "label": "종목코드",
+          "name": "ISU_CD",
+          "type": "string",
+          "semantic_type": "identifier"
+        },
+        {
+          "label": "종목명",
+          "name": "ISU_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "label": "시장구분",
+          "name": "MKT_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "default": "-",
+          "label": "소속부",
+          "name": "SECT_TP_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "종가",
+          "name": "TDD_CLSPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "대비",
+          "name": "CMPPREVDD_PRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": false,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0.00",
+          "label": "등락률",
+          "name": "FLUC_RT",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": false,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "시가",
+          "name": "TDD_OPNPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "고가",
+          "name": "TDD_HGPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "저가",
+          "name": "TDD_LWPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "거래량",
+          "name": "ACC_TRDVOL",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "거래대금",
+          "name": "ACC_TRDVAL",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "시가총액",
+          "name": "MKTCAP",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "상장주식수",
+          "name": "LIST_SHRS",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        }
+      ],
+      "downloadable_spec_sha256": "3fa0e69fe5b505f73ae9534970f5a0f044a7265e48144e71efdc5572e9bed494",
+      "production_endpoint_verified": true,
+      "endpoint_verification": "Production endpoint and wire fields checked against this dataset's downloadable public developer specification. Authenticated live calls are not part of this release verification."
+    },
+    "konex": {
+      "market": "konex",
+      "title": "코넥스 일별매매정보",
+      "source_url": "https://openapi.krx.co.kr/contents/OPP/USES/service/OPPUSES002_S2.cmd?BO_ID=HSiRvxGSYnvaKuAuqpqp",
+      "source_html_sha256": "ee9171c21cfde0d682afc756f4b7b32bb7474229be61b92e6fe5737e74ac3b74",
+      "verified_on": "2026-11-01",
+      "sample_path": "/svc/sample/apis/sto/knx_bydd_trd.json",
+      "production_path": "/svc/apis/sto/knx_bydd_trd",
+      "input": [
+        {
+          "label": "기준일자",
+          "name": "basDd",
+          "size": "8",
+          "type": "string"
+        }
+      ],
+      "block": "OutBlock_1",
+      "fields": [
+        {
+          "label": "기준일자",
+          "name": "BAS_DD",
+          "type": "string",
+          "semantic_type": "date"
+        },
+        {
+          "label": "종목코드",
+          "name": "ISU_CD",
+          "type": "string",
+          "semantic_type": "identifier"
+        },
+        {
+          "label": "종목명",
+          "name": "ISU_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "label": "시장구분",
+          "name": "MKT_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "default": "-",
+          "label": "소속부",
+          "name": "SECT_TP_NM",
+          "type": "string",
+          "semantic_type": "text"
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "종가",
+          "name": "TDD_CLSPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "대비",
+          "name": "CMPPREVDD_PRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": false,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0.00",
+          "label": "등락률",
+          "name": "FLUC_RT",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": false,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "시가",
+          "name": "TDD_OPNPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "고가",
+          "name": "TDD_HGPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "저가",
+          "name": "TDD_LWPRC",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "거래량",
+          "name": "ACC_TRDVOL",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "거래대금",
+          "name": "ACC_TRDVAL",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "시가총액",
+          "name": "MKTCAP",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        },
+        {
+          "default": "-",
+          "format": "###0",
+          "label": "상장주식수",
+          "name": "LIST_SHRS",
+          "type": "string",
+          "semantic_type": "decimal",
+          "missing_marker": "-",
+          "nonnegative": true,
+          "unit": null,
+          "unit_status": "Not specified in the referenced field definition; confirm with the provider before unit-sensitive analysis."
+        }
+      ],
+      "downloadable_spec_sha256": "98f166ff243e22cbea350a0b7a3637b6f42bd07df0da49a84397c43a5e9341eb",
+      "production_endpoint_verified": true,
+      "endpoint_verification": "Production endpoint and wire fields checked against this dataset's downloadable public developer specification. Authenticated live calls are not part of this release verification."
+    }
+  }
+}
